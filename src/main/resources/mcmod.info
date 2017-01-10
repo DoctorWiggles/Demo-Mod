@@ -1,0 +1,16 @@
+[
+{
+  "modid": "demo",
+  "name": "DemonstrationMod",
+  "description": "Tutorial Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["DoctorWiggles"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

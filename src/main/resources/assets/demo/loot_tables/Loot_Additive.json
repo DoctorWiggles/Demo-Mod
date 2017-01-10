@@ -1,0 +1,77 @@
+{
+    "pools": [
+        {
+                  
+            "name": "main",
+            #Amount of times to run pool
+            "rolls": {
+                "min": 0,
+                "max": 3
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    #unlocalized name domain
+                    "name": "minecraft:porkchop",
+                    #How often this will be chosen
+                    "weight": 30,
+                    "functions": [
+                        {
+                            #Amounts to drop
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        },
+                        {
+                            #If this dropped by and entity, which is on fire, cook it
+                            "function": "furnace_smelt",
+                            "conditions": [
+                                {
+                                    "condition": "entity_properties",
+                                    "entity": "this",
+                                    "properties": {
+                                        "on_fire": true
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            #Same deal but increases output scaling with enchants
+                            "function": "looting_enchant",
+                            "count": {
+                                "min": 0,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "demo:chestplacer_item",
+                    "weight": 30
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:emerald_block",
+                    "weight": 40,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 20
+                            }
+                        }
+                    ]
+                },
+                {       
+                    #Another way to increase randomness
+                    "type": "empty",
+                     "weight": 40
+                }                  
+            ]
+        }
+    ]
+}

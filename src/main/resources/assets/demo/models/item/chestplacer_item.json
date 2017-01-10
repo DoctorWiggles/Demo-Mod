@@ -1,0 +1,6 @@
+{
+    "parent":"demo:item/standard_item",
+    "textures": {
+        "layer0":"demo:items/chestplacer_item"
+    }
+}
